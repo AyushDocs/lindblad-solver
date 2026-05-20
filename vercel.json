@@ -1,4 +1,5 @@
 {
+  "buildCommand": "echo 'build skipped — gallery_data.py is committed'",
   "rewrites": [
     { "source": "/(.*)", "destination": "/api/index.py" }
   ]
