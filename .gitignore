@@ -7,4 +7,4 @@ fig_*.png
 .api/
 .vercel/
 .vscode/
-api/gallery_data.py
+# api/gallery_data.py is committed (required for Vercel deployment)
