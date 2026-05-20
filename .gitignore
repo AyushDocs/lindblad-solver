@@ -7,3 +7,4 @@ fig_*.png
 .api/
 .vercel/
 .vscode/
+api/gallery_data.py
