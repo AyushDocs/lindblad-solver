@@ -1,5 +1,4 @@
 {
-  "buildCommand": "pip install numpy scipy matplotlib && python build.py",
   "rewrites": [
     { "source": "/(.*)", "destination": "/api/index.py" }
   ]
