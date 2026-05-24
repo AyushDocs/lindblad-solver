@@ -76,9 +76,51 @@ export default function WhatIsLindblad() {
               The Equation — Broken Down
             </h3>
             <div className="flex justify-center mb-8">
-              <div className="bg-background rounded-xl p-6 sm:p-8 border border-border/50 overflow-x-auto w-full max-w-3xl">
-                <div className="text-sm sm:text-base text-rose-400 font-mono leading-relaxed text-center whitespace-pre-wrap break-all">
-                  dρ/dt = -i[H, ρ] + Σ<sub>j</sub> γ<sub>j</sub>(L<sub>j</sub> ρ L<sub>j</sub>† - &frac12;&#123;L<sub>j</sub>†L<sub>j</sub>, ρ&#125;)
+              <div className="bg-background rounded-xl p-6 sm:p-8 border border-border/50 overflow-x-auto w-full max-w-3xl flex justify-center">
+                <div className="flex items-center justify-center whitespace-nowrap min-w-max text-rose-400 font-serif italic text-xl sm:text-2xl select-none">
+                  {/* d\rho / dt fraction */}
+                  <div className="flex flex-col items-center mx-1 text-center">
+                    <span className="border-b border-rose-400/60 pb-0.5 px-1 text-sm sm:text-base not-italic font-sans">dρ</span>
+                    <span className="pt-0.5 px-1 text-sm sm:text-base not-italic font-sans">dt</span>
+                  </div>
+                  
+                  <span className="text-xl sm:text-3xl font-sans not-italic mx-2">=</span>
+                  
+                  <span className="not-italic font-sans mr-1">-i</span>
+                  <span>[H, ρ]</span>
+                  
+                  <span className="text-xl sm:text-3xl font-sans not-italic mx-2">+</span>
+                  
+                  {/* Summation */}
+                  <div className="flex flex-col items-center mx-2 text-center">
+                    <span className="text-2xl sm:text-4xl leading-none not-italic font-sans">∑</span>
+                    <span className="text-[10px] sm:text-xs not-italic font-sans -mt-1">j</span>
+                  </div>
+                  
+                  <span className="mr-1">
+                    γ<sub>j</sub>
+                  </span>
+                  
+                  {/* Big Parenthesis */}
+                  <span className="text-3xl sm:text-5xl font-sans not-italic font-light mr-1">(</span>
+                  
+                  <span className="mr-2">
+                    L<sub>j</sub> ρ L<sub>j</sub><sup>†</sup>
+                  </span>
+                  
+                  <span className="text-xl sm:text-3xl font-sans not-italic mx-2">-</span>
+                  
+                  {/* 1/2 fraction */}
+                  <div className="flex flex-col items-center mx-2 text-center">
+                    <span className="border-b border-rose-400/60 pb-0.5 px-1.5 text-xs sm:text-sm not-italic font-sans">1</span>
+                    <span className="pt-0.5 px-1.5 text-xs sm:text-sm not-italic font-sans">2</span>
+                  </div>
+                  
+                  <span className="ml-1">
+                    &#123; L<sub>j</sub><sup>†</sup> L<sub>j</sub>, ρ &#125;
+                  </span>
+                  
+                  <span className="text-3xl sm:text-5xl font-sans not-italic font-light ml-1">)</span>
                 </div>
               </div>
             </div>
@@ -196,15 +238,27 @@ export default function WhatIsLindblad() {
               {[
                 {
                   title: "Quantum Computing",
-                  desc: "Qubits decohere over T<sub>1</sub> and T<sub>2</sub> timescales. Lindblad models predict error rates, guide error correction design, and simulate noisy intermediate-scale quantum (NISQ) devices.",
+                  desc: (
+                    <>
+                      Qubits decohere over T<sub>1</sub> and T<sub>2</sub> timescales. Lindblad models predict error rates, guide error correction design, and simulate noisy intermediate-scale quantum (NISQ) devices.
+                    </>
+                  ),
                 },
                 {
                   title: "Quantum Optics",
-                  desc: "Atoms in cavities spontaneously emit photons, lasers have finite linewidths, and optical coherence decays — all captured naturally by Lindblad operators acting on the electromagnetic field modes.",
+                  desc: (
+                    <>
+                      Atoms in cavities spontaneously emit photons, lasers have finite linewidths, and optical coherence decays — all captured naturally by Lindblad operators acting on the electromagnetic field modes.
+                    </>
+                  ),
                 },
                 {
                   title: "Quantum Biology",
-                  desc: "Photosynthetic light-harvesting complexes, avian magnetoreception, and enzymatic reactions all involve open quantum dynamics where the environment plays a functional, not just destructive, role.",
+                  desc: (
+                    <>
+                      Photosynthetic light-harvesting complexes, avian magnetoreception, and enzymatic reactions all involve open quantum dynamics where the environment plays a functional, not just destructive, role.
+                    </>
+                  ),
                 },
               ].map((item) => (
                 <div key={item.title} className="bg-background/50 rounded-xl p-4 border border-border/50">

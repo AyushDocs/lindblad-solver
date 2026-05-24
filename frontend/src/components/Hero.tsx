@@ -20,7 +20,7 @@ export default function Hero() {
           animate={{ opacity: 1, scale: 1 }}
           transition={{ delay: 0.2 }}
         >
-          Open Quantum Systems
+          Interactive Visual Guide
         </motion.div>
 
         <motion.h1
@@ -64,29 +64,6 @@ export default function Hero() {
           >
             Try Simulation
           </a>
-        </motion.div>
-
-        <motion.div
-          className="mt-16 grid grid-cols-3 gap-4 max-w-lg mx-auto"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 0.7 }}
-        >
-          {[
-            { label: "Noise Channels", value: "T\u2081, T\u2082" },
-            { label: "Drive Types", value: "Resonant / Off" },
-            { label: "Solver", value: "NumPy + SciPy" },
-          ].map((item) => (
-            <div
-              key={item.label}
-              className="bg-card/50 rounded-lg p-3 border border-border/50"
-            >
-              <div className="text-xs text-muted mb-0.5">{item.label}</div>
-              <div className="text-sm font-semibold text-foreground">
-                {item.value}
-              </div>
-            </div>
-          ))}
         </motion.div>
       </motion.div>
 
